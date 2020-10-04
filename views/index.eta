@@ -1,0 +1,9 @@
+<% layout('./layout.eta') %>
+
+<div id="content">
+  <ul>
+    <% it.channels.forEach(function(channel){ %>
+    <li><a href="<%= channel.url %>"><%= channel.name %></a></li>
+    <% }) %>
+  </ul>
+</div>
