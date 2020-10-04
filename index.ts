@@ -19,8 +19,8 @@ app.addEventListener('listen', () => {
   console.log(`Listening on localhost:${port}`)
 })
 
-app.addEventListener('error', (err) => {
-  console.error(`Error: ${err}`)
+app.addEventListener('error', ({ error }) => {
+  console.error(`Error: ${error}`)
 })
 
 await app.listen({ port })
